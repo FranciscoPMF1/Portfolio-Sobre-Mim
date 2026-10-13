@@ -86,7 +86,7 @@ body {
 }
 
 #sobre-mim {
-    padding: 80px 80px;
+    padding: 80px 120px;
     color: #CBD5E1;
     text-align: center;
 }
@@ -137,9 +137,24 @@ form {
     background-color: #cbd5e1;
     width: 100%;
     padding: 15px;
+    text-align: center;
 }
 
 footer p{
     color: #0f172a;
     font-size: 20px;
+}
+
+footer ul {
+    list-style: none;
+    justify-content: center;
+}
+
+footer ul li a {
+    color: #0f172a;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color:#67e8f9
 }
