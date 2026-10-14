@@ -53,6 +53,34 @@ nav ul li a:hover {
     color: #67e8f9;
 }
 
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 10px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        display: block;
+        padding: 8px 10px;
+    }
+
+}
+
 #home {
     background: url('./img/praia.jpeg') center/cover no-repeat;
     display: flex;
