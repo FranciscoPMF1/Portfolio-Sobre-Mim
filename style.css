@@ -1,3 +1,28 @@
+:root {
+    --fundo: #0f172a;
+    --cards: #1e293b;
+    --bordas: #334155;
+    --destaque: #67e8f9;
+    --texto: #f8fafc;
+    --texto-secundario: #cbd5e1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
 nav {
     background: #020617;
     width: 100%;
@@ -10,7 +35,7 @@ nav {
 
 nav ul {
     list-style: none;
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
@@ -23,8 +48,9 @@ nav ul li a {
     font-size: 18px;
     color: #cbd5e1;
 }
+
 nav ul li a:hover {
-    color: #67e8f9
+    color: #67e8f9;
 }
 
 #home {
@@ -45,6 +71,7 @@ nav ul li a:hover {
         text-transform: normal;
         text-shadow: 0 2px 8px rgba(0,0,0,0.6);
     }
+
     h2 {
         color: #cbd5e1;
         font-size: 50px;
@@ -57,104 +84,270 @@ nav ul li a:hover {
     }
 }
 
-
 .fotos {
     padding: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-    
 }
 
 .fotos img {
-   width: 300px;
-   height: 400px; 
-   object-fit: cover;
-   border-radius: 20px;
-   box-shadow: 0 5px 15px #96144640;
-   transition: trnsform 0.3s ease;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #96144640;
+    transition: transform 0.3s ease;
 }
 
 .fotos img:hover {
     transform: scale(1.05);
 }
 
-body {
-    background: #0f172a;
-    margin: 0
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--bordas);
+    margin: 15px 0;
 }
 
 #sobre-mim {
-    padding: 80px 120px;
-    color: #CBD5E1;
-    text-align: center;
-}
-
-#sobre-mim h2 { 
-    font-size: 45px;
-}
-
-#sobre-mim p {
-    font-size: 23px;
-}
-
-#sobre-mim table {
-    font-size: 23px;
+    width: 90%;
+    max-width: 1150px;
     margin: 0 auto;
-    display: inline-block;
+    padding: 60px 0;
+}
 
-   th{
+.bloco {
+    margin-bottom: 65px;
+}
+
+.bloco h2 {
+    color: var(--destaque);
+    font-size: 34px;
     text-align: center;
-   }
-   td{
+    margin-bottom: 25px;
+}
+
+/* Parágrafos principais */
+
+.bloco > p {
+    background-color: var(--cards);
+    color: var(--texto-secundario);
+
+    font-size: 17px;
+    line-height: 1.8;
     text-align: left;
-   }
-   
+
+    padding: 30px;
+    margin-bottom: 20px;
+
+    border: 1px solid var(--bordas);
+    border-radius: 14px;
+
+    transition: 0.3s ease;
 }
 
-
-#contato {
-    text-align: center;
-    color:#CBD5E1
+.bloco > p:hover {
+    border-color: var(--destaque);
+    transform: translateY(-4px);
 }
 
-#contato h2 {
-    font-size: 45px;
-    }
-
-form {
-    text-align: center;
-    color: #CBD5E1;
+.listas {
     display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    padding: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+.listas ul {
+    flex: 1 1 250px;
+    max-width: 450px;
+
+    background-color: var(--cards);
+    color: var(--texto-secundario);
+
+    padding: 30px 30px 30px 50px;
+
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.listas ul:hover {
+    border-color: var(--destaque);
+    transform: translateY(-5px);
+}
+
+.listas li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.cards-eventos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-evento {
+    flex: 1 1 280px;
+    max-width: 360px;
+
+    background-color: var(--cards);
+    padding: 30px;
+
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.card-evento h3 {
+    color: var(--destaque);
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-evento ul {
+    color: var(--texto-secundario);
+    padding-left: 20px;
+}
+
+.card-evento li {
+    margin-bottom: 10px;
+}
+
+.card-evento li ul {
+    margin-top: 10px;
+}
+
+.card-evento:hover {
+    transform: translateY(-6px);
+    border-color: var(--destaque);
+}
+
+.cards-materias {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card-materia {
+    flex: 1 1 280px;
+    max-width: 360px;
+
+    background-color: var(--cards);
+    padding: 30px;
+
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.card-materia h3 {
+    font-size: 22px;
+    color: var(--destaque);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card-materia p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.card-materia:hover {
+    transform: translateY(-6px);
+    border-color: var(--destaque);
 }
 
 #rodape {
-    background-color: #cbd5e1;
+    background-color: var(--cards);
     width: 100%;
-    padding: 15px;
+    padding: 40px 20px;
     text-align: center;
+    border-top: 1px solid var(--bordas);
 }
 
-footer p{
-    color: #0f172a;
-    font-size: 20px;
+footer p {
+    color: var(--texto-secundario);
+    font-size: 17px;
+    margin-bottom: 15px;
 }
 
 footer ul {
     list-style: none;
-    justify-content: center;
+    padding: 0;
+    margin: 15px 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
 }
 
 footer ul li a {
-    color: #0f172a;
+    color: var(--destaque);
     text-decoration: none;
+    transition: 0.3s ease;
 }
 
 footer ul li a:hover {
-    color:#67e8f9
+    color: var(--texto);
+}
+
+footer .email {
+    color: var(--destaque);
+}
+
+@media (max-width: 768px) {
+
+    #sobre-mim {
+        width: 92%;
+        padding: 40px 0;
+    }
+
+    .bloco {
+        margin-bottom: 45px;
+    }
+
+    .bloco h2 {
+        font-size: 27px;
+    }
+
+    .bloco > p {
+        font-size: 16px;
+        padding: 22px;
+    }
+
+    .listas {
+        gap: 15px;
+    }
+
+    .listas ul {
+        max-width: 100%;
+    }
+
+    .card-evento,
+    .card-materia {
+        max-width: 100%;
+    }
+
+    .card-evento,
+    .card-materia {
+        padding: 25px;
+    }
 }

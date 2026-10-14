@@ -1,0 +1,407 @@
+:root {
+    --fundo: #0f172a;
+    --cards: #1e293b;
+    --bordas: #334155;
+    --destaque: #67e8f9;
+    --texto: #f8fafc;
+    --texto-secundario: #cbd5e1;
+    --texto-suave: #94a3b8;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+section {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+section h2 {
+    font-size: 30px;
+    color: var(--destaque);
+    margin-bottom: 25px;
+}
+
+
+.voltar {
+    display: inline-block;
+    margin: 25px 0 0 5%;
+    padding: 12px 20px;
+
+    background-color: var(--cards);
+    color: var(--texto);
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+
+    border: 1px solid var(--bordas);
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.voltar:hover {
+    background-color: var(--destaque);
+    color: var(--fundo);
+    border-color: var(--destaque);
+    transform: translateX(-5px);
+}
+
+
+#apresentacao {
+    text-align: center;
+    padding: 65px 20px 55px;
+}
+
+#apresentacao h1 {
+    font-size: 42px;
+    color: var(--texto);
+    margin-bottom: 15px;
+}
+
+#apresentacao h3 {
+    font-size: 23px;
+    color: var(--destaque);
+    margin-bottom: 15px;
+}
+
+#apresentacao p {
+    font-size: 18px;
+    color: var(--texto-secundario);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+#sobre-mim {
+    padding-top: 25px;
+    padding-bottom: 45px;
+}
+
+.card-sobre {
+    background-color: var(--cards);
+    padding: 35px;
+
+    border: 1px solid var(--bordas);
+    border-radius: 15px;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card-sobre h2 {
+    text-align: left;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.card-sobre p {
+    font-size: 17px;
+    color: var(--texto-secundario);
+    line-height: 1.8;
+}
+
+.card-sobre:hover {
+    transform: translateY(-5px);
+    border-color: var(--destaque);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+#contato h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Container dos três cards */
+
+.card-contatos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Cards individuais */
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 170px;
+    padding: 25px;
+
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.contatos:hover {
+    transform: translateY(-7px);
+    border-color: var(--destaque);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.contatos a {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--destaque);
+    text-decoration: none;
+    margin-bottom: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+.contatos a:hover {
+    text-decoration: underline;
+}
+
+.contatos p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+/* Primeiro card - e-mail */
+
+.contatos:first-child p:first-child {
+    color: var(--destaque);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+
+#forms {
+    padding-top: 45px;
+    padding-bottom: 90px;
+    text-align: center;
+}
+
+#forms h2 {
+    font-size: 30px;
+    color: var(--destaque);
+    margin-bottom: 15px;
+}
+
+#forms > p {
+    font-size: 17px;
+    color: var(--texto-secundario);
+    margin-bottom: 35px;
+}
+
+/* Container do formulário */
+
+#forms form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 35px;
+    background-color: var(--cards);
+
+    border: 1px solid var(--bordas);
+    border-radius: 15px;
+
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Labels */
+
+#forms label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--texto);
+
+    margin-top: 8px;
+}
+
+/* Campos de texto */
+
+#forms input:not([type="hidden"]),
+#forms textarea {
+    width: 100%;
+    padding: 14px 16px;
+
+    background-color: var(--fundo);
+    color: var(--texto);
+
+    border: 1px solid var(--bordas);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Texto de exemplo dos campos */
+
+#forms input::placeholder,
+#forms textarea::placeholder {
+    color: var(--texto-suave);
+}
+
+/* Efeito ao clicar no campo */
+
+#forms input:focus,
+#forms textarea:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 3px rgba(103, 232, 249, 0.12);
+}
+
+/* Caixa de mensagem */
+
+#forms textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Botão Enviar Mensagem */
+
+#forms button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px 25px;
+
+    background-color: var(--destaque);
+    color: var(--fundo);
+
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#forms button:hover {
+    background-color: var(--texto);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(103, 232, 249, 0.18);
+}
+
+#forms button:active {
+    transform: translateY(0);
+}
+
+
+@media (max-width: 900px) {
+
+    .card-contatos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contatos:last-child {
+        grid-column: 1 / -1;
+    }
+
+    #apresentacao h1 {
+        font-size: 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        width: 92%;
+        padding: 35px 0;
+    }
+
+    #apresentacao {
+        padding: 55px 10px 35px;
+    }
+
+    #apresentacao h1 {
+        font-size: 29px;
+    }
+
+    #apresentacao h3 {
+        font-size: 20px;
+    }
+
+    #apresentacao p {
+        font-size: 16px;
+    }
+
+    section h2,
+    #forms h2 {
+        font-size: 25px;
+    }
+
+    .card-sobre {
+        padding: 25px;
+    }
+
+    .card-sobre p {
+        font-size: 16px;
+    }
+
+    .card-contatos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .contatos:last-child {
+        grid-column: auto;
+    }
+
+    .contatos {
+        min-height: 140px;
+    }
+
+    #forms form {
+        padding: 23px;
+    }
+
+    #forms > p {
+        font-size: 15px;
+    }
+
+    .voltar {
+        margin-left: 4%;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

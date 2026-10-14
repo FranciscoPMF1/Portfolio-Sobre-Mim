@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/contato.css">
+    <title>Sobre Mim</title>
+</head>
+<body>
+    
+    <a href="../index.html" class="voltar"> 
+       &#8592; Voltar ao início
+    </a>
+
+    <section id="apresentacao">
+       <h1>Vamos nos conhecer</h1>
+
+       <h3>Francisco Padua Martins Filho</h3>
+       <p>
+        Estudante de Ciências da Computação e apaixonado por tecnologia.
+       </p>
+    </section>
+
+    <section id="sobre-mim">
+        <div class="card-sobre">
+            <h2>Quem Sou Eu?</h2>
+            <p>
+                Sou estudante de Ciência da Computação na UVV, interessado em Desenvolvimento Web, Cibersegurança e DevOps. 
+                Estou sempre buscando novos conhecimentos e oportunidades de desenvolver projetos.
+            </p>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+
+        <div class="card-contatos">
+
+            <div class="contatos">
+                <p>
+                    E-mail | ffilhopmf@gmail.com
+                </p>
+
+                <p>
+                    Envie uma mensagem
+                </p>
+            </div>
+
+            <div class="contatos">
+                <a href="https://github.com/FranciscoPMF1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github">
+                    GitHub
+                </a>
+
+                <p>
+                    Conheça meus códigos
+                </p>
+            </div>
+
+            <div class="contatos">
+                <a href="https://wa.me/5527988608092"
+                target="_blank">
+                    WhatsApp
+                </a>
+
+                <p>
+                    Converse diretamente
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="forms">
+         <h2>Envie uma Mensagem</h2>
+
+        <p>
+            Tem alguma dúvida ou projeto em mente?
+            Entre em contato comigo!
+        </p>
+
+        <form action="https://formsubmit.co/ffilhopmf@gmail.com"
+            method="POST">
+
+            <label for="nome">Seu Nome</label>
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+            >
+
+            <label for="email">Seu E-mail</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+            <label for="assunto">Assunto</label>
+            <input
+                type="text"
+                id="assunto"
+                name="assunto"
+                placeholder="Assunto da mensagem"
+                required
+            >
+
+            <label for="mensagem">Sua Mensagem</label>
+            <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="6"
+                placeholder="Escreva sua mensagem..."
+                required
+            ></textarea>
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="Nova mensagem da Landing Page"
+            >
+
+            <button type="submit">
+                Enviar Mensagem &#8594;
+            </button>
+
+        </form>
+    </section>
+</body>
+</html>

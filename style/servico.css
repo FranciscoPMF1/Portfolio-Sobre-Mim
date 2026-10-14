@@ -1,0 +1,374 @@
+
+/* =====================================
+   PALETA DE CORES
+===================================== */
+
+:root {
+    --fundo: #0f172a;
+    --cards: #1e293b;
+    --bordas: #334155;
+    --destaque: #67e8f9;
+    --texto: #cbd5e1;
+    --texto-secundario: #cbd5e1;
+    --texto-suave: #94a3b8;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--texto);
+    margin: 50px 0 15px;
+}
+
+h1 + p {
+    text-align: center;
+    font-size: 18px;
+    color: var(--texto-secundario);
+    margin: 0 20px 40px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--texto);
+    margin-bottom: 35px;
+}
+
+
+#servicos {
+    padding: 30px 5% 80px;
+}
+
+.card-servicos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card-estatico,
+.card-dinamico,
+.card-avancado {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    max-width: 360px;
+    background-color: var(--cards);
+    padding: 30px;
+    border: 1px solid var(--bordas);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.card-estatico:hover,
+.card-dinamico:hover,
+.card-avancado:hover {
+    transform: translateY(-8px);
+    border-color: var(--destaque);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Destaque no card dinâmico */
+
+.card-dinamico {
+    border: 2px solid var(--destaque);
+}
+
+/* Títulos */
+
+.card-servicos h3 {
+    text-align: center;
+    font-size: 23px;
+    color: var(--texto);
+    margin-bottom: 20px;
+}
+
+/* Parágrafos */
+
+.card-servicos p {
+    color: var(--texto-secundario);
+    margin-bottom: 15px;
+}
+
+/* Linhas divisórias */
+
+.card-servicos hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: var(--bordas);
+    margin: 15px 0;
+}
+
+/* Listas */
+
+.card-servicos ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.card-servicos li {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+
+.card-servicos ul + p {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+.card-servicos ul + p + p {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--destaque);
+    margin-bottom: 20px;
+}
+
+/* Botões Saiba Mais */
+
+.card-servicos a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--destaque);
+    color: var(--fundo);
+    padding: 13px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.card-servicos a:hover {
+    background-color: var(--texto);
+    transform: scale(1.03);
+}
+
+
+#diferenciais {
+    padding: 80px 5%;
+    background-color: #111c30;
+}
+
+.diferenciais {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.responsivo,
+.performance,
+.suporte {
+    flex: 1 1 250px;
+    max-width: 350px;
+    padding: 35px 25px;
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.responsivo:hover,
+.performance:hover,
+.suporte:hover {
+    transform: translateY(-6px);
+    border-color: var(--destaque);
+}
+
+.diferenciais h3 {
+    color: var(--destaque);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.diferenciais p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+
+#faq {
+    padding: 80px 5%;
+    background-color: var(--fundo);
+}
+
+.perguntas {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.perguntas details {
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.perguntas summary {
+    padding: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--texto);
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.perguntas summary:hover {
+    background-color: var(--bordas);
+    color: var(--destaque);
+}
+
+.perguntas details[open] summary {
+    color: var(--destaque);
+    border-bottom: 1px solid var(--bordas);
+}
+
+.perguntas details p {
+    padding: 20px;
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+/* =====================================
+   SOLICITAR ORÇAMENTO
+===================================== */
+
+#orcamento {
+    padding: 80px 20px;
+    background-color: var(--cards);
+    border-top: 1px solid var(--bordas);
+    text-align: center;
+}
+
+#orcamento h2 {
+    font-size: 32px;
+    color: var(--texto);
+    margin-bottom: 20px;
+}
+
+#orcamento p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--texto-secundario);
+}
+
+#orcamento a {
+    display: inline-block;
+    background-color: var(--destaque);
+    color: var(--fundo);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+#orcamento a:hover {
+    background-color: var(--texto);
+    transform: translateY(-4px);
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .card-servicos,
+    .diferenciais {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-estatico,
+    .card-dinamico,
+    .card-avancado,
+    .responsivo,
+    .performance,
+    .suporte {
+        width: 100%;
+        max-width: 450px;
+        flex: auto;
+    }
+
+    #servicos,
+    #diferenciais,
+    #faq {
+        padding: 60px 20px;
+    }
+
+    #orcamento h2 {
+        font-size: 26px;
+    }
+
+    #orcamento p {
+        font-size: 16px;
+    }
+}
+
+.voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 25px 0 0 5%;
+    padding: 12px 20px;
+
+    background-color: #1e293b;
+    color: #f8fafc;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    border: 1px solid #334155;
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.voltar:hover {
+    background-color: #67e8f9;
+    color: #0f172a;
+    border-color: #67e8f9;
+    transform: translateX(-5px);
+}

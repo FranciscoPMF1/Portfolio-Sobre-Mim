@@ -1,145 +1,319 @@
+:root {
+    --fundo: #0f172a;
+    --cards: #1e293b;
+    --bordas: #334155;
+    --destaque: #67e8f9;
+    --texto: #f8fafc;
+    --texto-secundario: #cbd5e1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
+
 
 nav {
     background: #020617;
     width: 100%;
     padding: 18px;
-    top: 0;
-    left: 0;
     text-align: center;
-    box-sizing: border-box;
 }
 
 nav h1 {
-    color: #cbd5e1;
+    color: var(--texto-secundario);
     font-size: 35px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 #meus-hobbys {
-    background: #cbd5e1 ;
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 0;
     text-align: center;
-    padding: 20px 100px;
-    
-    
 }
 
 #meus-hobbys h2 {
-    font-size: 45px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #0f172a;
+    font-size: 34px;
+    color: var(--destaque);
+    margin-bottom: 30px;
 }
 
-#meus-hobbys p {
-    font-size: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #0f172a;
+/* Card de apresentação */
+
+.card-sobre {
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 14px;
+
+    padding: 35px;
+    text-align: left;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.card-sobre:hover {
+    border-color: var(--destaque);
+    transform: translateY(-5px);
+}
+
+.card-sobre p {
+    font-size: 17px;
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    margin: 0 0 20px;
+}
+
+.card-sobre p:last-child {
+    margin-bottom: 0;
 }
 
 #videos-fotos {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 50px 0;
     text-align: center;
-    background: #020617;
-    margin-top: 0;
-    padding-top: 20px;
-    color: #cbd5e1;
-   
-    h2 {
-        font-size: 45px; 
-        font-family: Georgia, 'Times New Roman', Times, serif; 
-    }
-    
-     h3 {
-        font-size: 30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 }
+
+#videos-fotos h2 {
+    font-size: 34px;
+    color: var(--destaque);
+    margin-bottom: 45px;
+}
+
+#videos-fotos h3 {
+    font-size: 25px;
+    color: var(--texto);
+    margin: 45px 0 25px;
+}
+
 
 .futevolei {
     display: flex;
-    gap: 20px;
     justify-content: center;
-    padding: 35px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .futevolei video {
-    width: 400px;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+
     border-radius: 15px;
+    border: 1px solid var(--bordas);
+
+    background-color: #020617;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
 }
+
+.futevolei video:hover {
+    transform: translateY(-5px);
+    border-color: var(--destaque);
+}
+
 
 .futevoleif {
     display: flex;
-    gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .futevoleif img {
-    width: 400px;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+
     border-radius: 15px;
+    border: 1px solid var(--bordas);
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
 }
 
+.futevoleif img:hover {
+    transform: scale(1.03);
+    border-color: var(--destaque);
+}
+
+
 .estudos {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
-    justify-content: center;
-    padding: 35px;
+    padding: 20px 0;
 }
 
 .estudos img {
-    width: 500px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+
     border-radius: 15px;
+    border: 1px solid var(--bordas);
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.estudos img:hover {
+    transform: translateY(-5px);
+    border-color: var(--destaque);
 }
 
 #buttom {
-    background: #020617;
+    padding: 40px 20px 70px;
     text-align: center;
-    padding: 40px;
 }
 
-#buttom button {
-    width: 200px;
-    height: 80px;
-    border-radius: 15px;
-    background-color: #cbd5e1;
-}
+.voltar {
+    display: inline-block;
+    padding: 14px 25px;
 
+    background-color: var(--cards);
+    color: var(--texto);
 
-#buttom button a {
+    font-size: 16px;
+    font-weight: bold;
     text-decoration: none;
-    color: #0f172a;
-    font-size: 20px;
+
+    border: 1px solid var(--bordas);
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
 }
 
-#buttom button a:hover {
-    color: #6c69fd
+.voltar:hover {
+    background-color: var(--destaque);
+    color: var(--fundo);
+    border-color: var(--destaque);
+    transform: translateX(-5px);
 }
 
 #rodape {
-    background-color: #cbd5e1;
     width: 100%;
-    padding: 15px;
+    padding: 40px 20px;
+
+    background-color: var(--cards);
+    border-top: 1px solid var(--bordas);
     text-align: center;
-    box-sizing: border-box;
 }
 
-footer p{
-    color: #0f172a;
-    font-size: 20px;
+footer p {
+    color: var(--texto-secundario);
+    font-size: 17px;
+    margin-bottom: 15px;
 }
 
 footer ul {
     list-style: none;
-    justify-content: center;
+    padding: 0;
+    margin: 15px 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
 }
 
 footer ul li a {
-    color: #0f172a;
+    color: var(--destaque);
     text-decoration: none;
-    font-size: 17px;
+    transition: color 0.3s ease;
 }
 
 footer ul li a:hover {
-    color:#67e8f9
+    color: var(--texto);
+}
+
+footer .email {
+    color: var(--destaque);
+}
+
+@media (max-width: 900px) {
+
+    .estudos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #meus-hobbys h2,
+    #videos-fotos h2 {
+        font-size: 29px;
+    }
+
+    .futevolei video,
+    .futevoleif img {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav h1 {
+        font-size: 28px;
+    }
+
+    #meus-hobbys {
+        width: 92%;
+        padding: 40px 0;
+    }
+
+    #meus-hobbys h2,
+    #videos-fotos h2 {
+        font-size: 25px;
+    }
+
+    .card-sobre {
+        padding: 22px;
+    }
+
+    .card-sobre p {
+        font-size: 15px;
+    }
+
+    #videos-fotos {
+        width: 92%;
+        padding: 30px 0;
+    }
+
+    #videos-fotos h3 {
+        font-size: 21px;
+    }
+
+    .futevolei video,
+    .futevoleif img {
+        max-width: 100%;
+    }
+
+    .estudos {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #buttom {
+        padding: 30px 20px 50px;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
 }

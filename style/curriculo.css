@@ -1,0 +1,428 @@
+
+/* =====================================
+   PALETA DE CORES
+===================================== */
+
+:root {
+    --fundo: #0f172a;
+    --cards: #1e293b;
+    --bordas: #334155;
+    --destaque: #67e8f9;
+    --texto: #f8fafc;
+    --texto-secundario: #cbd5e1;
+    --texto-suave: #94a3b8;
+}
+
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+section {
+    width: 100%;
+    margin: 0;
+    padding: 25px 0;
+}
+
+section h2 {
+    font-size: 27px;
+    color: var(--destaque);
+    margin-bottom: 22px;
+}
+
+/* =====================================
+   BOTÃO VOLTAR
+===================================== */
+
+.voltar {
+    display: inline-block;
+    margin: 25px 0 0 5%;
+    padding: 12px 20px;
+
+    background-color: var(--cards);
+    color: var(--texto);
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+
+    border: 1px solid var(--bordas);
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.voltar:hover {
+    background-color: var(--destaque);
+    color: var(--fundo);
+    border-color: var(--destaque);
+    transform: translateX(-5px);
+}
+
+/* =====================================
+   APRESENTAÇÃO
+===================================== */
+
+#apresentacao {
+    text-align: center;
+    padding: 45px 0 50px;
+}
+
+#apresentacao h1 {
+    font-size: 40px;
+    color: var(--texto);
+    margin-bottom: 12px;
+}
+
+#apresentacao p {
+    font-size: 17px;
+    color: var(--texto-secundario);
+    margin-bottom: 8px;
+}
+
+#apresentacao p:first-of-type {
+    color: var(--destaque);
+    font-weight: bold;
+}
+
+/* =====================================
+   SOBRE MIM E FORMAÇÃO
+===================================== */
+
+.linha-curriculo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* Estilo compartilhado */
+
+#sobre-mim,
+#formacao {
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    padding: 30px;
+    min-width: 0;
+    height: 100%;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#sobre-mim:hover,
+#formacao:hover {
+    transform: translateY(-6px);
+    border-color: var(--destaque);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.linha-curriculo h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* SOBRE MIM */
+
+#sobre-mim p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* FORMAÇÃO ACADÊMICA */
+
+#formacao h3 {
+    font-size: 20px;
+    color: var(--texto);
+    margin-bottom: 15px;
+}
+
+#formacao p {
+    font-size: 16px;
+    color: var(--texto-secundario);
+    margin-bottom: 12px;
+}
+
+#formacao p:last-child {
+    color: var(--texto-suave);
+}
+
+/* =====================================
+   HABILIDADES TÉCNICAS
+===================================== */
+
+.card-habilidades {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.habilidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 130px;
+    min-width: 0;
+    padding: 25px 15px;
+
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.habilidade h3 {
+    font-size: 22px;
+    color: var(--destaque);
+}
+
+.habilidade:hover {
+    transform: translateY(-8px);
+    border-color: var(--destaque);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================
+   EXPERIÊNCIAS PROFISSIONAIS
+===================================== */
+
+.card-experiencias {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.experiencias {
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    padding: 30px;
+    min-width: 0;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.experiencias h3 {
+    color: var(--destaque);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.experiencias p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+.experiencias:hover {
+    transform: translateY(-6px);
+    border-color: var(--destaque);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================
+   PROJETOS DESENVOLVIDOS
+===================================== */
+
+.card-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.projeto {
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    padding: 30px;
+    min-width: 0;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.projeto h3 {
+    font-size: 22px;
+    color: var(--destaque);
+    margin-bottom: 15px;
+}
+
+.projeto p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+.projeto:hover {
+    transform: translateY(-8px);
+    border-color: var(--destaque);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================
+   IDIOMAS
+===================================== */
+
+.card-idiomas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.idioma {
+    background-color: var(--cards);
+    border: 1px solid var(--bordas);
+    border-radius: 12px;
+
+    text-align: center;
+    padding: 30px;
+    min-width: 0;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.idioma h3 {
+    color: var(--destaque);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.idioma p {
+    color: var(--texto-secundario);
+    font-size: 17px;
+}
+
+.idioma:hover {
+    transform: translateY(-6px);
+    border-color: var(--destaque);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================
+   RESPONSIVIDADE - TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .linha-curriculo {
+        grid-template-columns: 1fr;
+    }
+
+    .card-habilidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-projetos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #apresentacao h1 {
+        font-size: 34px;
+    }
+}
+
+/* =====================================
+   RESPONSIVIDADE - CELULAR
+===================================== */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+    }
+
+    section {
+        padding: 22px 0;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    #apresentacao {
+        padding: 45px 0;
+    }
+
+    #apresentacao h1 {
+        font-size: 28px;
+    }
+
+    #apresentacao p {
+        font-size: 15px;
+    }
+
+    .linha-curriculo,
+    .card-experiencias,
+    .card-projetos,
+    .card-idiomas {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card-habilidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .habilidade {
+        min-height: 100px;
+        padding: 15px;
+    }
+
+    .habilidade h3 {
+        font-size: 18px;
+    }
+
+    #sobre-mim,
+    #formacao,
+    .experiencias,
+    .projeto,
+    .idioma {
+        padding: 23px;
+    }
+
+    .voltar {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
